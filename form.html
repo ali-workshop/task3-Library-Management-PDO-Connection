@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Entry Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Library Book Entry</h2>
+        <form id="bookForm" action="" method="post">
+            <div class="form-group">
+                <button type="submit" onclick="setAction('add_book.php')">ADD BOOK</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="setAction('update_book.php')">UPDATE BOOK USING EXTRA INFO</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="setAction('edit_book_id.php')">UPDATE BOOK USING ID</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="setAction('delete_book.php')">DELETE BOOK USING EXTRA INFO</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="setAction('delete_book_id.php')">DELETE BOOK USING ID</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="setAction('view_books.php')">VIEW BOOKS</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function setAction(action) {
+            document.getElementById('bookForm').action = action;
+        }
+    </script>
+</body>
+
+</html>
